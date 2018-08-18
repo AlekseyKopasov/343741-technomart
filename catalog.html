@@ -17,7 +17,8 @@
       <div class="container">
         <a class="company-logo" href="index.html"><img src="img/main-page/main-logo.png" alt="Интернет-магазин Техномарт">Техномарт</a>
         <form action="/" class="search-form" method="get">
-          <input type="text" placeholder="Поиск: ">
+          <label for="search"><span class="visually-hidden">Поиск по сайту</span></label>
+          <input id="search" type="text" placeholder="Поиск: ">
         </form>
         <ul class="user-panel">
           <li class="user-panel__bookmarks"><a href="#">Закладки: 0</a></li>
@@ -59,21 +60,65 @@
   <main class="main-content">
     <div class="container">
       <ul class="breadcrumbs">
-        <li><a href="index.html">Главная</a></li>
+        <li><a href="index.html"><span class="visually-hidden">Главная страница</span></a></li>
         <li><a href="catalog.html">Каталог</a></li>
         <li><a href="#">Инструмент</a></li>
         <li><a>Перфораторы</a></li>
       </ul>
       <h2 class="section-headline">Перфораторы</h2>
-
       <section class="filters">
         <h3>Фильтр: </h3>
-        <!-- Здесь будет форма -->
+        <form action="https://echo.htmlacademy.ru" method="post">
+          <fieldset class="filters-price">
+            <legend>Цена:</legend>
+            <div class="range-box">
+              <div class="range-controls">
+                <div class="left-control" tabindex="0" aria-label="Установить минимальный диапазон цен"></div>
+                <div class="right-control" tabindex="0" aria-label="Установить максимальный диапазон цен"></div>
+              </div>
+              <ul class="range-price">
+                <li>0</li>
+                <li>-</li>
+                <li>30000</li>
+              </ul>
+            </div>
+          </fieldset>
+          <fieldset class="filters-producers">
+            <legend>Производители:</legend>
+            <p><input id="produser-bosch" type="checkbox" name="Bosch">
+              <label for="produser-bosch">Bosch</label></p>
+            <p><input id="produser-interscol" type="checkbox" name="interscol">
+              <label for="produser-interscol">Интерскол</label></p>
+            <p><input id="produser-makita" type="checkbox" name="Makita">
+              <label for="produser-makita">Makita</label></p>
+            <p><input id="produser-dewalt" type="checkbox" name="Dewalt">
+              <label for="produser-dewalt">Dewalt</label></p>
+            <p><input id="produser-hitachi" type="checkbox" name="Hitahi">
+              <label for="produser-hitachi">Hitachi</label></p>
+          </fieldset>
+          <fieldset class="filters-battery">
+            <legend>Питание:</legend>
+            <p><input id="battery" type="radio" name="battery-power" value="battery">
+              <label for="battery">Аккумуляторные</label></p>
+            <p><input id="power-network" type="radio" name="battery-power" value="network">
+              <label for="power-network">Сетевые</label></p>
+          </fieldset>
+          <button class="btn" type="submit">Показать</button>
+        </form>
       </section>
 
       <section class="catalog-list">
         <h3 class="visually-hidden">Список товаров в каталоге Перфораторы</h3>
-        <!-- Здесь будет форма сортировки -->
+        <h3>Сортировка:</h3>
+        <ul class="goods-sorting">
+          <li><a href="#">По цене</a></li>
+          <li><a href="#">По типу</a></li>
+          <li><a href="#">По функционалу</a></li>
+        </ul>
+        <ul class="sorting-direction">
+          <li><a href="#"><span class="visually-hidden">Сортировать по возрастанию</span></a></li>
+          <li><a href="#"><span class="visually-hidden">Сортировать по убыванию</span></a></li>
+        </ul>
         <ul class="goods-list">
           <li class="goods-item">
             <div class="user-action">
@@ -206,7 +251,7 @@
     <div class="container">
       <div class="footer-top">
         <div class="row-top">
-          <a class="company-logo">Техномарт</a>
+          <a class="company-logo" href="index.html"><img src="img/main-page/main-logo.png" alt="Интернет-магазин Техномарт"></a>
           <nav class="footer-menu">
             <ul>
               <li><a href="#">Главная</a></li>
@@ -236,9 +281,9 @@
           <p>© 2010–2017 Компания «Техномарт»<br>Все права защищены</p>
         </div>
         <ul class="social-links">
-          <li><a href="#">Вконтакте</a></li>
-          <li><a href="#">Фэйсбук</a></li>
-          <li><a href="#">Инстаграмм</a></li>
+          <li><a href="#"><span class="visually-hidden">Вконтакте</span></a></li>
+          <li><a href="#"><span class="visually-hidden">Фэйсбук</span></a></li>
+          <li><a href="#"><span class="visually-hidden">Инстаграмм</span></a></li>
         </ul>
 
         <div class="feedback">
@@ -253,16 +298,30 @@
     </div>
   </footer>
 
-
-  <div class="modal-feedback">
-    <!-- Форма обратной связи -->
-  </div>
+  <section class="modal-feedback">
+    <h2 class="visually-hidden">Форма обратной связи</h2>
+    <form action="https://echo.htmlacademy.ru" method="post">
+      <p><label for="name">Ваше имя:</label>
+        <input id="name" type="text" name="user-name" placeholder="Имя Фамилия"></p>
+      <p><label for="mail">Ваш e-mail:</label>
+        <input id="mail" type="text" name="user-mail" placeholder="email@example.com"></p>
+      <p><label for="feedback">Текст письма:</label>
+        <textarea id="feedback" name="user-feedback" placeholder="В свободной форме"></textarea></p>
+      <button class="btn" type="submit">Отправить</button>
+      <button class="modal-close" type="button" title="Закрыть форму обратной связи">X</button>
+    </form>
+  </section>
 
   <div class="modal-map">
     <!-- Карта -->
   </div>
 
-
+  <section class="purchase">
+    <h2 class="purchase-headline">Товар добавлен в корзину!</h2>
+    <a class="btn" href="#">Оформить зааказ</a>
+    <button class=" btn btn-close" type="button">Продолжить покупки</button>
+    <button class="modal-close" type="button" aria-label="Закрыть модальное окно"></button>
+  </section>
 </body>
 
 </html>
