@@ -72,24 +72,6 @@
             <h3>Техника</h3>
             <a href="#">Для стройки</a>
           </li>
-          <li class="offers-item offers-item__slider">
-            <div class="offer-slide">
-              <div class="slide-header">
-                <h3>Перфораторы</h3>
-                <p>Настоящие мужские игрушки</p>
-              </div>
-              <a href="catalog.html">Открыть каталог</a>
-            </div>
-            <div class="offer-slide">
-              <div class="slide-header">
-                <h3>Дрели</h3>
-                <p>Соседям на радость!</p>
-              </div>
-              <a href="catalog.html">Открыть каталог</a>
-            </div>
-            <button class="prev-slide" aria-label="Предыдущий слайд"></button>
-            <button class="next-slide" aria-label="Следующий слайд"></button>
-          </li>
           <li class="offers-item">
             <h3>Скидки 50%</h3>
             <a href="#">На 350 товаров</a>
@@ -99,6 +81,28 @@
             <a href="#">Бесплатно</a>
           </li>
         </ul>
+        <div class="offers-slider">
+          <div class="offer-slide">
+            <div class="slide-header">
+              <h3>Перфораторы</h3>
+              <p>Настоящие мужские игрушки</p>
+            </div>
+            <a href="catalog.html">Открыть каталог</a>
+          </div>
+          <div class="offer-slide">
+            <div class="slide-header">
+              <h3>Дрели</h3>
+              <p>Соседям на радость!</p>
+            </div>
+            <a href="catalog.html">Открыть каталог</a>
+          </div>
+          <ul class="slide-controls">
+            <li><button type="button" aria-label="Предыдущий слайд"></button></li>
+            <li><button type="button" aria-label="Следующий слайд"></button></li>
+          </ul>
+          <button class="prev-slide" aria-label="Предыдущий слайд"></button>
+          <button class="next-slide" aria-label="Следующий слайд"></button>
+        </div>
       </div>
     </section>
 
@@ -300,8 +304,8 @@
       <p><label for="feedback">Текст письма:</label>
         <textarea id="feedback" name="user-feedback" placeholder="В свободной форме"></textarea></p>
       <button class="btn" type="submit">Отправить</button>
-      <button class="modal-close" type="button" aria-label="Закрыть форму обратной связи"></button>
     </form>
+    <button class="modal-close" type="button" aria-label="Закрыть форму обратной связи"></button>
   </section>
 
   <div class="modal-map">
