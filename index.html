@@ -15,7 +15,7 @@
   <header class="main-header">
     <div class="header-top">
       <div class="container">
-        <a class="company-logo"><img src="img/main-page/main-logo.png" alt="Интернет-магазин Техномарт">Техномарт</a>
+        <a class="company-logo"><img src="img/main-page/main-logo.png" alt="Интернет-магазин Техномарт"></a>
         <form action="/" class="search-form" method="get">
           <label for="search"><span class="visually-hidden">Поиск по сайту</span></label>
           <input id="search" type="text" placeholder="Поиск: ">
@@ -57,48 +57,48 @@
 
   <main class="main-content">
     <section class="offers">
-      <h2 class="visually-hidden">Товары</h2>
+      <h2 class="visually-hidden">Предложения</h2>
       <div class="container">
         <ul class="offers-item__list">
           <li class="offers-item">
             <h3>Материалы</h3>
-            <a href="#">На любой вкус</a>
+            <a class="btn" href="#">На любой вкус</a>
           </li>
           <li class="offers-item">
             <h3>Инструмент</h3>
-            <a href="#">На все случаи</a>
+            <a class="btn" href="#">На все случаи</a>
           </li>
           <li class="offers-item">
             <h3>Техника</h3>
-            <a href="#">Для стройки</a>
+            <a class="btn" href="#">Для стройки</a>
           </li>
           <li class="offers-item">
             <h3>Скидки 50%</h3>
-            <a href="#">На 350 товаров</a>
+            <a class="btn" href="#">На 350 товаров</a>
           </li>
           <li class="offers-item">
             <h3>Доставка</h3>
-            <a href="#">Бесплатно</a>
+            <a class="btn" href="#">Бесплатно</a>
           </li>
         </ul>
         <div class="offers-slider">
           <div class="offer-slide">
             <div class="slide-header">
-              <h3>Перфораторы</h3>
-              <p>Настоящие мужские игрушки</p>
-            </div>
-            <a href="catalog.html">Открыть каталог</a>
-          </div>
-          <div class="offer-slide">
-            <div class="slide-header">
               <h3>Дрели</h3>
               <p>Соседям на радость!</p>
             </div>
-            <a href="catalog.html">Открыть каталог</a>
+            <a class="btn" href="catalog.html">Открыть каталог</a>
+          </div>
+          <div class="offer-slide">
+            <div class="slide-header">
+              <h3>Перфораторы</h3>
+              <p>Настоящие мужские игрушки</p>
+            </div>
+            <a class="btn" href="catalog.html">Открыть каталог</a>
           </div>
           <ul class="slide-controls">
-            <li><button type="button" aria-label="Предыдущий слайд"></button></li>
-            <li><button type="button" aria-label="Следующий слайд"></button></li>
+            <li><button class="slide-indicators slide-indicators-current" aria-label="Первый слайд"></button></li>
+            <li><button class="slide-indicators " aria-label="Второй слайд"></button></li>
           </ul>
           <button class="prev-slide" aria-label="Предыдущий слайд"></button>
           <button class="next-slide" aria-label="Следующий слайд"></button>
@@ -187,34 +187,36 @@
     </section>
 
     <section class="services">
-      <div class="services-header">
-        <h2 class="section-headline">Сервисы</h2>
-        <p>Хороший интернет-магазин отличается от плохого не только ценами! Мы стараемся изо всех сил, чтобы сделать ваши покупки приятными.</p>
-      </div>
-      <div class="services-tabs">
-        <ul class="services-list">
-          <li class="services-item"><a href="#">Доставка</a></li>
-          <li class="services-item"><a href="#">Гарантия</a></li>
-          <li class="services-item"><a href="#">Кредит</a></li>
-        </ul>
-        <div class="services-tabs__content">
-          <div class="tab-content">
-            <div class="tab-desciption">
-              <h2>Доставка</h2>
-              <p>Мы с удовольствием доставим ваш товар прямо к вашему подъезду совершенно бесплатно! Ведь мы неплохо заработаем, поднимая его на ваш на этаж!</p>
+      <div class="container">
+        <div class="services-header">
+          <h2 class="section-headline">Сервисы</h2>
+          <p>Хороший интернет-магазин отличается от плохого не только ценами! Мы стараемся изо всех сил, чтобы сделать ваши покупки приятными.</p>
+        </div>
+        <div class="services-tabs">
+          <ul class="services-list">
+            <li class="services-item"><a href="#">Доставка</a></li>
+            <li class="services-item"><a href="#">Гарантия</a></li>
+            <li class="services-item"><a href="#">Кредит</a></li>
+          </ul>
+          <div class="services-tabs__content">
+            <div class="tab-content">
+              <div class="tab-description">
+                <h2>Доставка</h2>
+                <p>Мы с удовольствием доставим ваш товар прямо к вашему подъезду совершенно бесплатно! Ведь мы неплохо заработаем, поднимая его на ваш на этаж!</p>
+              </div>
             </div>
-          </div>
-          <div class="tab-content">
-            <div class="tab-description">
-              <h2>Гарантия</h2>
-              <p>Если купленный у нас товар поломается или заискрит, а также в случае пожара, спровоцированного его возгаранием, вы всегда можете быть уверены в нашей гарантии. Мы обменяем сгоревший товар на новый. Дом уж восстановите как-нибудь сами.</p>
+            <div class="tab-content">
+              <div class="tab-description">
+                <h2>Гарантия</h2>
+                <p>Если купленный у нас товар поломается или заискрит, а также в случае пожара, спровоцированного его возгаранием, вы всегда можете быть уверены в нашей гарантии. Мы обменяем сгоревший товар на новый. Дом уж восстановите как-нибудь сами.</p>
+              </div>
             </div>
-          </div>
-          <div class="tab-content">
-            <div class="tab-description">
-              <h2>Кредит</h2>
-              <p>Залезть в долговую яму стало проще! Кредитные консультанты придут вам на помощь.</p>
-              <a class="btn" href="#">Отправить заявку</a>
+            <div class="tab-content">
+              <div class="tab-description">
+                <h2>Кредит</h2>
+                <p>Залезть в долговую яму стало проще! Кредитные консультанты придут вам на помощь.</p>
+                <a class="btn" href="#">Отправить заявку</a>
+              </div>
             </div>
           </div>
         </div>
@@ -231,12 +233,12 @@
           <li class="carriers-item">Автотрейдинг</li>
           <li class="carriers-item">ЖелДорЭкспедиция</li>
         </ul>
-        <a class="btn" href="#">Подробнее о компании</a>
+        <a class="btn btn-about-company" href="#">Подробнее о компании</a>
       </div>
       <div class="contacts">
         <h2 class="feature-headline">Контакты</h2>
         <p>Вы можете забрать товар сами, заехав в наш офис:</p>
-        <a href="#"><img src="img/main-page/map_picture.jpg" alt="г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8"></a>
+        <div><a href="#"><img src="img/main-page/map_picture.jpg" height="158" width="300" alt="г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8"></a></div>
         <a class="btn btn-modal-map" href="#">Заблудились? Напишите нам!</a>
       </div>
     </section>
@@ -276,9 +278,13 @@
           <p>© 2010–2017 Компания «Техномарт»<br>Все права защищены</p>
         </div>
         <ul class="social-links">
-          <li><a href="#"><span class="visually-hidden">Вконтакте</span></a></li>
-          <li><a href="#"><span class="visually-hidden">Фэйсбук</span></a></li>
-          <li><a href="#"><span class="visually-hidden">Инстаграмм</span></a></li>
+          <li>
+            <a href="#"><span class="visually-hidden">Вконтакте</span></a>
+          </li>
+          <li><a href="#"><span class="visually-hidden">Фэйсбук</span></a>
+          </li>
+          <li><a href="#"><span class="visually-hidden">Инстаграмм</span></a>
+          </li>
         </ul>
 
         <div class="feedback">
@@ -303,7 +309,7 @@
         <input id="mail" type="text" name="user-mail" placeholder="email@example.com"></p>
       <p><label for="feedback">Текст письма:</label>
         <textarea id="feedback" name="user-feedback" placeholder="В свободной форме"></textarea></p>
-      <button class="btn" type="submit">Отправить</button>
+      <button class="btn btn-send" type="submit">Отправить</button>
     </form>
     <button class="modal-close" type="button" aria-label="Закрыть форму обратной связи"></button>
   </section>
@@ -313,9 +319,13 @@
   </div>
 
   <section class="purchase">
-    <h2 class="purchase-headline">Товар добавлен в корзину!</h2>
-    <a href="#" class="btn">Оформить зааказ</a>
-    <button class=" btn btn-close" type="button">Продолжить покупки</button>
+    <div class="purchase-wrapper">
+      <h2 class="purchase-headline">Товар добавлен в корзину!</h2>
+        <div class="purchase-buttons">
+          <a href="#" class="btn btn-checkout">Оформить заказ</a>
+          <button class=" btn btn-close" type="button">Продолжить покупки</button>
+        </div>
+    </div>
     <button class="modal-close" type="button" aria-label="Закрыть модальное окно"></button>
   </section>
 </body>
