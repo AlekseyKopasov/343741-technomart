@@ -15,15 +15,15 @@
   <header class="main-header">
     <div class="header-top">
       <div class="container">
-        <a class="company-logo" href="index.html"><img src="img/main-page/main-logo.png" alt="Интернет-магазин Техномарт">Техномарт</a>
+        <a class="company-logo" href="index.html"><img src="img/main-page/main-logo.png" alt="Интернет-магазин Техномарт"></a>
         <form action="/" class="search-form" method="get">
           <label for="search"><span class="visually-hidden">Поиск по сайту</span></label>
           <input id="search" type="text" placeholder="Поиск: ">
         </form>
         <ul class="user-panel">
-          <li class="user-panel__bookmarks"><a href="#">Закладки: 0</a></li>
-          <li class="user-panel__basket bastet-active"><a href="#">Корзина: 0</a></li>
-          <li class="user-panel__order"><a href="#">Оформить заказ</a></li>
+          <li class="user-panel__link"><a href="#">Закладки: 0</a></li>
+          <li class="user-panel__link basket-full"><a href="#">Корзина: 10</a></li>
+          <li class="user-panel__link"><a href="#">Оформить заказ</a></li>
         </ul>
       </div>
     </div>
@@ -37,10 +37,10 @@
           <span>г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8</span>
         </div>
         <div class="user-control">
-          <button class="btn">Выйти</button>
+            <a class="btn btn-sign-out" href="#">Равшан Джамшутович</a>
           <ul>
-            <li><a href="user-orders.html">Мои заказы</a></li>
-            <li><a href="user-personal-area">Личный кабинет</a></li>
+            <li><a class="user-orders" href="#">Мои заказы</a></li>
+            <li><a class="user-personal-area" href="#">Личный кабинет</a></li>
           </ul>
         </div>
         <nav class="main-navigation">
@@ -103,7 +103,7 @@
             <p><input id="power-network" type="radio" name="battery-power" value="network">
               <label for="power-network">Сетевые</label></p>
           </fieldset>
-          <button class="btn" type="submit">Показать</button>
+          <button class="btn btn-show-sorted" type="submit">Показать</button>
         </form>
       </section>
 
@@ -307,7 +307,7 @@
         <input id="mail" type="text" name="user-mail" placeholder="email@example.com"></p>
       <p><label for="feedback">Текст письма:</label>
         <textarea id="feedback" name="user-feedback" placeholder="В свободной форме"></textarea></p>
-      <button class="btn" type="submit">Отправить</button>
+      <button class="btn btn-send" type="submit">Отправить</button>
     </form>
     <button class="modal-close" type="button" title="Закрыть форму обратной связи">X</button>
   </section>
@@ -317,9 +317,13 @@
   </div>
 
   <section class="purchase">
-    <h2 class="purchase-headline">Товар добавлен в корзину!</h2>
-    <a class="btn" href="#">Оформить зааказ</a>
-    <button class=" btn btn-close" type="button">Продолжить покупки</button>
+    <div class="purchase-wrapper">
+      <h2 class="purchase-headline">Товар добавлен в корзину!</h2>
+        <div class="purchase-buttons">
+          <a href="#" class="btn btn-checkout">Оформить заказ</a>
+          <button class=" btn btn-close" type="button">Продолжить покупки</button>
+        </div>
+    </div>
     <button class="modal-close" type="button" aria-label="Закрыть модальное окно"></button>
   </section>
 </body>
