@@ -15,15 +15,15 @@
   <header class="main-header">
     <div class="header-top">
       <div class="container">
-        <a class="company-logo" href="index.html"><img src="img/main-page/main-logo.png" alt="Интернет-магазин Техномарт"></a>
+        <a class="company-logo"><img src="img/main-page/main-logo.png" alt="Интернет-магазин Техномарт"></a>
         <form action="/" class="search-form" method="get">
           <label for="search"><span class="visually-hidden">Поиск по сайту</span></label>
           <input id="search" type="text" placeholder="Поиск: ">
         </form>
         <ul class="user-panel">
-          <li class="user-panel__link"><a href="#">Закладки: 0</a></li>
-          <li class="user-panel__link basket-full"><a href="#">Корзина: 10</a></li>
-          <li class="user-panel__link"><a href="#">Оформить заказ</a></li>
+          <li><a class="user-panel__link" href="#">Закладки: 0</a></li>
+          <li><a class="user-panel__link basket-full" href="#">Корзина: 10</a></li>
+          <li><a class="user-panel__link" href="#">Оформить заказ</a></li>
         </ul>
       </div>
     </div>
@@ -36,26 +36,28 @@
           <span>+7 (812) 555-05-55</span>
           <span>г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8</span>
         </div>
-        <div class="user-control">
+        <div class="user user-control">
             <a class="btn btn-sign-out" href="#">Равшан Джамшутович</a>
           <ul>
             <li><a class="user-orders" href="#">Мои заказы</a></li>
             <li><a class="user-personal-area" href="#">Личный кабинет</a></li>
           </ul>
         </div>
-        <nav class="main-navigation">
-          <ul>
-            <li><a href="index.html">Главная</a></li>
-            <li><a href="#">Компания</a></li>
-            <li><a>Каталог</a></li>
-            <li><a href="#">Новости</a></li>
-            <li><a href="#">Спецпредложения</a></li>
-            <li><a href="#">Доставка</a></li>
-            <li><a href="#">Контакты</a></li>
-          </ul>
-        </nav>
       </div>
     </div>
+    <nav class="main-navigation">
+      <div class="container">
+        <ul>
+          <li><a href="index.html">Главная</a></li>
+          <li><a>Компания</a></li>
+          <li><a>Каталог</a></li>
+          <li><a href="#">Новости</a></li>
+          <li><a href="#">Спецпредложения</a></li>
+          <li><a href="#">Доставка</a></li>
+          <li><a href="#">Контакты</a></li>
+        </ul>
+      </div>
+    </nav>
   </header>
   <main class="main-content">
     <div class="container">
@@ -65,8 +67,9 @@
         <li><a href="#">Инструмент</a></li>
         <li><a>Перфораторы</a></li>
       </ul>
-      <h2 class="section-headline">Перфораторы</h2>
-      <section class="filters">
+      <h2 class="section-headline catalog-main-headline">Перфораторы</h2>
+      <div class="filter-wrapper">
+        <section class="filters">
         <h3>Фильтр: </h3>
         <form action="https://echo.htmlacademy.ru" method="post">
           <fieldset class="filters-price">
@@ -107,17 +110,19 @@
         </form>
       </section>
 
-      <section class="catalog-list">
+        <section class="catalog-list">
         <h3 class="visually-hidden">Список товаров в каталоге Перфораторы</h3>
-        <h3>Сортировка:</h3>
         <ul class="goods-sorting">
+          <li><h3>Сортировка:</h3></li>
           <li><a href="#">По цене</a></li>
           <li><a href="#">По типу</a></li>
           <li><a href="#">По функционалу</a></li>
-        </ul>
-        <ul class="sorting-direction">
-          <li><a href="#"><span class="visually-hidden">Сортировать по возрастанию</span></a></li>
-          <li><a href="#"><span class="visually-hidden">Сортировать по убыванию</span></a></li>
+          <li class="sorting-direction">
+            <ul>
+              <li><a href="#"><span class="visually-hidden">Сортировать по возрастанию</span></a></li>
+              <li><a href="#"><span class="visually-hidden">Сортировать по убыванию</span></a></li>
+            </ul>
+          </li>
         </ul>
         <ul class="goods-list">
           <li class="goods-item">
@@ -236,6 +241,7 @@
           <li><a class="pagination-link" href="#">Следующая</a></li>
         </ul>
       </section>
+      </div>
     </div>
 
     <section class="catalog-item-description">
@@ -248,24 +254,22 @@
   </main>
 
   <footer class="main-footer">
-    <div class="container">
-      <div class="footer-top">
+    <div class="footer-top">
+      <div class="container">
         <div class="row-top">
-          <a class="company-logo" href="index.html"><img src="img/main-page/main-logo.png" alt="Интернет-магазин Техномарт"></a>
+          <a class="company-logo" href="index.html"><img src="img/main-page/logo-footer.png" alt="Интернет-магазин Техномарт"></a>
           <nav class="footer-menu">
             <ul>
-              <li><a href="#">Главная</a></li>
               <li><a href="#">Компания</a></li>
-              <li><a>Каталог</a></li>
               <li><a href="#">Новости</a></li>
-              <li><a href="#">Спецпредложения</a></li>
+              <li><a>Каталог</a></li>
               <li><a href="#">Доставка</a></li>
               <li><a href="#">Контакты</a></li>
             </ul>
           </nav>
         </div>
         <div class="row-bottom">
-          <p class="address">г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8 +7 (812) 555-05-55</p>
+          <p class="address">г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8<br>+7 (812) 555-05-55</p>
           <nav class="offers-menu">
             <ul>
               <li><a href="#">Материалы</a></li>
@@ -276,16 +280,21 @@
           </nav>
         </div>
       </div>
-      <div class="footer-bottom">
+    </div>
+    <div class="footer-bottom">
+      <div class="container">
         <div class="copyright">
           <p>© 2010–2017 Компания «Техномарт»<br>Все права защищены</p>
         </div>
         <ul class="social-links">
-          <li><a href="#"><span class="visually-hidden">Вконтакте</span></a></li>
-          <li><a href="#"><span class="visually-hidden">Фэйсбук</span></a></li>
-          <li><a href="#"><span class="visually-hidden">Инстаграмм</span></a></li>
+          <li>
+            <a href="#"><span class="visually-hidden">Вконтакте</span></a>
+          </li>
+          <li><a href="#"><span class="visually-hidden">Фэйсбук</span></a>
+          </li>
+          <li><a href="#"><span class="visually-hidden">Инстаграмм</span></a>
+          </li>
         </ul>
-
         <div class="feedback">
           <span>Обратная связь:</span>
           <a href="mailto:mail@htmlacademy.ru">mail@htmlacademy.ru</a>

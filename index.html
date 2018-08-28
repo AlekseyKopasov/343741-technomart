@@ -11,7 +11,6 @@
 </head>
 
 <body>
-
   <header class="main-header">
     <div class="header-top">
       <div class="container">
@@ -36,30 +35,32 @@
           <span>+7 (812) 555-05-55</span>
           <span>г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8</span>
         </div>
-        <div class="user-auth">
+        <div class=" user user-auth">
           <a class="btn btn-login" href="#">Войти</a>
           <a class="btn btn-register" href="#">Регистрация</a>
         </div>
-        <nav class="main-navigation">
-          <ul>
-            <li><a>Главная</a></li>
-            <li><a href="#">Компания</a></li>
-            <li><a href="catalog.html">Каталог</a></li>
-            <li><a href="#">Новости</a></li>
-            <li><a href="#">Спецпредложения</a></li>
-            <li><a href="#">Доставка</a></li>
-            <li><a href="#">Контакты</a></li>
-          </ul>
-        </nav>
       </div>
     </div>
+    <nav class="main-navigation">
+      <div class="container">
+        <ul>
+          <li><a>Главная</a></li>
+          <li><a href="#">Компания</a></li>
+          <li><a href="catalog.html">Каталог</a></li>
+          <li><a href="#">Новости</a></li>
+          <li><a href="#">Спецпредложения</a></li>
+          <li><a href="#">Доставка</a></li>
+          <li><a href="#">Контакты</a></li>
+        </ul>
+      </div>
+    </nav>
   </header>
 
   <main class="main-content">
     <section class="offers">
       <h2 class="visually-hidden">Предложения</h2>
       <div class="container">
-        <ul class="offers-item__list">
+        <ul class="offers-item__list list-row">
           <li class="offers-item">
             <h3>Материалы</h3>
             <a class="btn" href="#">На любой вкус</a>
@@ -71,14 +72,6 @@
           <li class="offers-item">
             <h3>Техника</h3>
             <a class="btn" href="#">Для стройки</a>
-          </li>
-          <li class="offers-item">
-            <h3>Скидки 50%</h3>
-            <a class="btn" href="#">На 350 товаров</a>
-          </li>
-          <li class="offers-item">
-            <h3>Доставка</h3>
-            <a class="btn" href="#">Бесплатно</a>
           </li>
         </ul>
         <div class="offers-slider">
@@ -103,6 +96,16 @@
           <button class="prev-slide" aria-label="Предыдущий слайд"></button>
           <button class="next-slide" aria-label="Следующий слайд"></button>
         </div>
+        <ul class="offers-item__list list-column">
+          <li class="offers-item">
+            <h3>Скидки 50%</h3>
+            <a class="btn" href="#">На 350 товаров</a>
+          </li>
+          <li class="offers-item">
+            <h3>Доставка</h3>
+            <a class="btn" href="#">Бесплатно</a>
+          </li>
+        </ul>
       </div>
     </section>
 
@@ -224,44 +227,45 @@
     </section>
 
     <section class="about-company">
-      <div class="features">
-        <h2 class="feature-headline">Компания "Техномарт"</h2>
-        <p>Настоящий мужской шоппинг начинается здесь! Огромный выбор товаров для ремонта и строительства не оставит равнодушными любителей сэкономить на гастарбайтерах.</p>
-        <p>Мы можем доставить ваш товар в самые отдаленные точки России! Техномарт работает со многими транспортными компаниями:</p>
-        <ul class="carriers-list">
-          <li class="carriers-item">Деловые линии</li>
-          <li class="carriers-item">Автотрейдинг</li>
-          <li class="carriers-item">ЖелДорЭкспедиция</li>
-        </ul>
-        <a class="btn btn-about-company" href="#">Подробнее о компании</a>
+      <div class="container">
+        <div class="features">
+          <h2 class="feature-headline">Компания &laquo;Техномарт&raquo;</h2>
+          <p>Настоящий мужской шоппинг начинается здесь! Огромный выбор товаров для ремонта и строительства не оставит равнодушными любителей сэкономить на гастарбайтерах.</p>
+          <p>Мы можем доставить ваш товар в самые отдаленные точки России! Техномарт работает со многими транспортными компаниями:</p>
+          <ul class="carriers-list">
+            <li class="carriers-item">Деловые линии</li>
+            <li class="carriers-item">Автотрейдинг</li>
+            <li class="carriers-item">ЖелДорЭкспедиция</li>
+          </ul>
+          <a class="btn btn-about-company" href="#">Подробнее о компании</a>
+        </div>
+        <div class="contacts">
+          <h2 class="feature-headline">Контакты</h2>
+          <p>Вы можете забрать товар сами,<br> заехав в наш офис:</p>
+          <a href="#"><img src="img/main-page/map_picture.jpg" height="158" width="300" alt="г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8"></a>
+          <a class="btn btn-modal-map" href="#">Заблудились? Напишите нам!</a>
+        </div>
       </div>
-      <div class="contacts">
-        <h2 class="feature-headline">Контакты</h2>
-        <p>Вы можете забрать товар сами, заехав в наш офис:</p>
-        <a href="#"><img src="img/main-page/map_picture.jpg" height="158" width="300" alt="г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8"></a>
-        <a class="btn btn-modal-map" href="#">Заблудились? Напишите нам!</a>
     </section>
   </main>
 
   <footer class="main-footer">
-    <div class="container">
-      <div class="footer-top">
+    <div class="footer-top">
+      <div class="container">
         <div class="row-top">
-          <a class="company-logo"><img src="img/main-page/main-logo.png" alt="Интернет-магазин Техномарт"></a>
+          <a class="company-logo"><img src="img/main-page/logo-footer.png" alt="Интернет-магазин Техномарт"></a>
           <nav class="footer-menu">
             <ul>
-              <li><a>Главная</a></li>
               <li><a href="#">Компания</a></li>
-              <li><a href="catalog.html">Каталог</a></li>
               <li><a href="#">Новости</a></li>
-              <li><a href="#">Спецпредложения</a></li>
+              <li><a href="catalog.html">Каталог</a></li>
               <li><a href="#">Доставка</a></li>
               <li><a href="#">Контакты</a></li>
             </ul>
           </nav>
         </div>
         <div class="row-bottom">
-          <p class="address">г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8 +7 (812) 555-05-55</p>
+          <p class="address">г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8<br>+7 (812) 555-05-55</p>
           <nav class="offers-menu">
             <ul>
               <li><a href="#">Материалы</a></li>
@@ -272,7 +276,9 @@
           </nav>
         </div>
       </div>
-      <div class="footer-bottom">
+    </div>
+    <div class="footer-bottom">
+      <div class="container">
         <div class="copyright">
           <p>© 2010–2017 Компания «Техномарт»<br>Все права защищены</p>
         </div>
@@ -285,7 +291,6 @@
           <li><a href="#"><span class="visually-hidden">Инстаграмм</span></a>
           </li>
         </ul>
-
         <div class="feedback">
           <span>Обратная связь:</span>
           <a href="mailto:mail@htmlacademy.ru">mail@htmlacademy.ru</a>
@@ -320,10 +325,10 @@
   <section class="purchase">
     <div class="purchase-wrapper">
       <h2 class="purchase-headline">Товар добавлен в корзину!</h2>
-        <div class="purchase-buttons">
-          <a href="#" class="btn btn-checkout">Оформить заказ</a>
-          <button class=" btn btn-close" type="button">Продолжить покупки</button>
-        </div>
+      <div class="purchase-buttons">
+        <a href="#" class="btn btn-checkout">Оформить заказ</a>
+        <button class=" btn btn-close" type="button">Продолжить покупки</button>
+      </div>
     </div>
     <button class="modal-close" type="button" aria-label="Закрыть модальное окно"></button>
   </section>
