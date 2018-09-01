@@ -878,7 +878,7 @@
     font-weight: 700;
   }
 
-  .services-item a:hover {
+  .services-item:not(.services-item-active) a:hover {
     background-color: #293449;
   }
 
