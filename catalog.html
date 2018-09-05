@@ -96,14 +96,19 @@
               <legend>Цена:</legend>
               <div class="range-box">
                 <div class="range-controls">
-                  <div class="left-control" tabindex="0" aria-label="Установить минимальный диапазон цен"></div>
-                  <div class="right-control" tabindex="0" aria-label="Установить максимальный диапазон цен"></div>
+                  <div class="scale">
+                    <div class="scale-bar"></div>
+                  </div>
+                  <div class="toggle left-toggle" tabindex="0" aria-label="Установить минимальный диапазон цен"></div>
+                  <div class="toggle right-toggle" tabindex="0" aria-label="Установить максимальный диапазон цен"></div>
                 </div>
-                <ul class="range-price">
-                  <li><span>0</span></li>
-                  <li><span>-</span></li>
-                  <li><span>30000</span></li>
-                </ul>
+                <div class="range-price">
+                  <label for="min-price" class="visually-hidden">Установите минимальную цену</label>
+                  <input id="min-price" type="text" value="0">
+                  <span>-</span>
+                  <label for="max-price" class="visually-hidden">Установите максимальную цену</label>
+                  <input id="max-price" type="text" value="30000">
+                </div>
               </div>
             </fieldset>
             <fieldset class="filters-producers">
