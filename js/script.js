@@ -1,20 +1,20 @@
 var feedback = document.querySelector('.modal-write-us');
-    modalMap = document.querySelector('.modal-map');
-    modalFeedback = document.querySelector('.modal-feedback');
-    modal = document.querySelector('.modal');
-    close = document.querySelector('.modal-close');
-    userName = modalFeedback.querySelector('#name');
-    userMail = modalFeedback.querySelector('#mail');
-    form = modalFeedback.querySelector('form');
-    openMap = document.querySelector('.modal-open-map');
-    modalMap = document.querySelector('.modal-map');
-    mapClose = modalMap.querySelector('.modal-close');
-    addToBasket = document.querySelectorAll('.btn-buy');
-    modalPurchase = document.querySelector('.purchase');
-    purchasecClose = modalPurchase.querySelector('.modal-close');
+var  modalMap = document.querySelector('.modal-map');
+var  modalFeedback = document.querySelector('.modal-feedback');
+var  modal = document.querySelector('.modal');
+var  close = document.querySelector('.modal-close');
+var  userName = modalFeedback.querySelector('#name');
+var userMail = modalFeedback.querySelector('#mail');
+var form = modalFeedback.querySelector('form');
+var openMap = document.querySelector('.modal-open-map');
+var modalMap = document.querySelector('.modal-map');
+var mapClose = modalMap.querySelector('.modal-close');
+var addToBasket = document.querySelectorAll('.btn-buy');
+var modalPurchase = document.querySelector('.purchase');
 
-    isStorageSupport = true;
-    storageUserName = '';
+
+var isStorageSupport = true;
+var storageUserName = '';
 
 
 /* Попап с формой обратной связи */
@@ -91,21 +91,28 @@ window.addEventListener('keydown', function (evt) {
 
 /* Попап: Добавлено в корзину */
 
-addToBasket.addEventListener('click', function (evt) {
-  evt.preventDefault();
-  modalPurchase.classList.add('modal-show');
-} );
 
-purchaseClose.addEventListener('click', function (evt) {
-  evt.preventDefault();
-  modalPurchase.classList.remove('modal-show');
-});
+if (modalPurchase) {
+    var purchasecClose = modalPurchase.querySelector('.modal-close');
 
-window.addEventListener('keydown', function (evt) {
-  if(evt.keyCode === 27) {
-    if(modalPurchase.classList.contains('modal-show')) {
-      evt.preventDefault();
-      modalPurchase.classList.remove('modal-show');
-    }
+		for (var i = 0; i < addToBasket.length; i++) {
+			addToBasket[i].addEventListener('click', function (evt) {
+				evt.preventDefault();
+				modalPurchase.classList.add('modal-show');
+			});
+		}
+
+  purchasecClose.addEventListener('click', function (evt) {
+    evt.preventDefault();
+    modalPurchase.classList.remove('modal-show');
+  });
+
+  window.addEventListener('keydown', function (evt) {
+			if (evt.keyCode === 27) {
+				evt.preventDefault();
+				if (modalPurchase.classList.contains('modal-show')) {
+					modalPurchase.classList.remove('modal-show');
+				}
+			}
+		});
   }
-});
