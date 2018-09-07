@@ -261,8 +261,8 @@
           <div class="contacts">
             <h2 class="feature-headline">Контакты</h2>
             <p>Вы можете забрать товар сами, заехав в наш офис:</p>
-            <a href="#"><img src="img/main-page/map_picture.jpg" height="158" width="300" alt="г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8"></a>
-            <a class="btn btn-modal-map" href="#">Заблудились? Напишите нам!</a>
+            <a class="modal-open-map" href="#"><img src="img/main-page/map_picture.jpg" height="158" width="300" alt="г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8"></a>
+            <a class="btn modal-write-us" href="#">Заблудились? Напишите нам!</a>
           </div>
         </div>
       </div>
@@ -355,7 +355,9 @@
 
   <section class="modal modal-map">
     <h2 class="visually-hidden">Как до нас добраться</h2>
-    <p><img src="../img/main-page/map-big.jpg" width="940" height="455" alt="Офис компании по адресу ул. Большая Конюшенная 19/8, Санкт-Петербург"></p>
+
+      <iframe src="https://yandex.ru/map-widget/v1/-/CBBaA-FixD" width="940" height="455" frameborder="1" allowfullscreen="true"></iframe>
+
     <button class="modal-close" type="button">Закрыть</button>
   </section>
 
@@ -369,6 +371,8 @@
     </div>
     <button class="modal-close" type="button" aria-label="Закрыть модальное окно"></button>
   </section>
+
+  <script src="js/script.js"></script>
 </body>
 
 </html>

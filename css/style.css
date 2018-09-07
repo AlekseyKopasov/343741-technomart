@@ -260,7 +260,7 @@
     left: 16px;
   }
 
-  .search-form input+svg {
+  .search-form input + svg {
     fill: #ffffff;
     opacity: .3;
   }
@@ -285,7 +285,7 @@
     background-color: #212a3a;
   }
 
-  .search-form input:hover:not(:focus)+svg {
+  .search-form input:hover:not(:focus) + svg {
     fill: #ffffff;
     opacity: 1;
   }
@@ -295,7 +295,7 @@
     background-color: #fff;
   }
 
-  .search-form input:focus+svg {
+  .search-form input:focus + svg {
     fill: #ee3643;
     opacity: 1;
   }
@@ -386,6 +386,7 @@
     display: -webkit-flex;
     display: -ms-flex;
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-around;
     align-items: center;
     margin: 0;
@@ -428,7 +429,7 @@
     align-self: flex-start;
   }
 
-  .btn-login, .btn-register, .btn-sign-out {
+  .btn-login, .btn-register, .btn-signed-in {
     font-size: 21px;
     line-height: 21px;
     text-transform: none;
@@ -464,7 +465,8 @@
     opacity: 1;
   }
 
-  .btn-login:active, .btn-register:active, .btn-sign-out:active {
+  .btn-login:active, .btn-register:active, .btn-signed-in:active
+   {
     color: rgba(0, 0, 0, .3);
   }
 
@@ -845,7 +847,6 @@
     padding: 0;
     margin-bottom: -13px;
     padding-bottom: 19px;
-    margin-top: auto;
   }
 
   .actual-price {
@@ -1194,7 +1195,7 @@
     padding-right: 53px;
   }
 
-  .btn-modal-map {
+  .modal-write-us {
     margin-top: auto;
   }
 
@@ -1375,7 +1376,7 @@
     background-color: #ee3643;
   }
 
-  .btn-sign-out {
+  .btn-signed-in {
     display: -webkit-flex;
     display: -ms-flex;
     display: flex;
@@ -1383,29 +1384,38 @@
     align-items: center;
   }
 
-  .btn-sign-out span {
+  .btn-sign-out {
+    position: absolute;
+    top: 12px;
+    right: 5px;
+  }
+
+  .btn-signed-in span {
     padding-left: 15px;
     padding-right: 36px;
     ;
   }
 
+  .btn-signed-in path, .btn-signed-in:active path,
   .btn-sign-out path, .btn-sign-out:active path {
     fill: #c5c5c5;
   }
 
-  .btn-sign-out:hover {
+  .btn-signed-in:hover {
     background-color: #fff;
     color: #000;
   }
 
+  .btn-signed-in:hover path,
   .btn-sign-out:hover path {
     fill: #32425c;
   }
 
-  .btn-sign-out:active {
+  .btn-signed-in:active {
     color: rgba(0, 0, 0, .3);
   }
 
+  .btn-signed-in:active path,
   .btn-sign-out:active path {
     fill: #c5c5c5;
   }
@@ -1617,6 +1627,7 @@
     display: -ms-flex;
     display: flex;
     align-items: center;
+    flex-wrap: wrap;
     border-radius: 3px;
     background-color: #f7f3ec;
   }
@@ -1625,7 +1636,8 @@
     display: -webkit-flex;
     display: -ms-flex;
     display: flex;
-    justify-content: flex-end;
+    flex-wrap: wrap;
+    justify-content: space-between;
     align-items: center;
     margin: 0;
     padding: 0;
@@ -1735,6 +1747,7 @@
     display: inline-block;
     width: 30px;
     margin: 0;
+    vertical-align: baseline;
     text-align: center;
   }
 
@@ -1750,13 +1763,13 @@
     cursor: pointer;
   }
 
-  .producers-checkbox__checkbox:focus+.checkbox-indicator, .battery-radio__radio:focus+.radio-indicator {
+  .producers-checkbox__checkbox:focus + .checkbox-indicator, .battery-radio__radio:focus + .radio-indicator {
     border-color: #663d15;
     outline: thin dotted;
     outline: 5px auto -webkit-focus-ring-color;
   }
 
-  .producers-checkbox__checkbox+.checkbox-indicator {
+  .producers-checkbox__checkbox + .checkbox-indicator {
     position: absolute;
     top: -3px;
     left: 0;
@@ -1766,12 +1779,12 @@
     background-repeat: no-repeat;
   }
 
-  .producers-checkbox__checkbox:hover+.checkbox-indicator {
+  .producers-checkbox__checkbox:hover + .checkbox-indicator {
     background-image: url(../img/icons/icon-checkbox-off-hover.svg);
     background-repeat: no-repeat;
   }
 
-  .producers-checkbox__checkbox:checked+.checkbox-indicator {
+  .producers-checkbox__checkbox:checked + .checkbox-indicator {
     position: absolute;
     top: -3px;
     left: 0;
@@ -1781,11 +1794,11 @@
     background-repeat: no-repeat;
   }
 
-  .producers-checkbox__checkbox:disabled+.checkbox-indicator, .producers-checkbox__checkbox:checked:disabled+.checkbox-indicator {
+  .producers-checkbox__checkbox:disabled + .checkbox-indicator, .producers-checkbox__checkbox:checked:disabled + .checkbox-indicator {
     opacity: .3;
   }
 
-  .producers-checkbox__checkbox :checked:hover+.checkbox-indicator {
+  .producers-checkbox__checkbox:checked:hover + .checkbox-indicator {
     background-image: url(../img/icons/icon-checkbox-on-hover.svg);
     background-repeat: no-repeat;
   }
@@ -1794,7 +1807,7 @@
     margin-bottom: 55px;
   }
 
-  .battery-radio__radio+.radio-indicator {
+  .battery-radio__radio + .radio-indicator {
     position: absolute;
     top: -3px;
     left: 0;
@@ -1805,7 +1818,7 @@
     opacity: .5;
   }
 
-  .battery-radio__radio:checked+.radio-indicator {
+  .battery-radio__radio:checked + .radio-indicator {
     position: absolute;
     top: -3px;
     left: 0;
@@ -1816,11 +1829,11 @@
     opacity: .5;
   }
 
-  .battery-radio__radio:hover+.radio-indicator {
+  .battery-radio__radio:hover + .radio-indicator {
     opacity: 1;
   }
 
-  .battery-radio__radio:disabled+.radio-indicator, .battery-radio__radio:checked:disabled+.radio-indicator {
+  .battery-radio__radio:disabled + .radio-indicator, .battery-radio__radio:checked:disabled + .radio-indicator {
     opacity: .3;
   }
 
@@ -1944,6 +1957,7 @@
   }
 
   /*==========Modal feedback==========*/
+
 
   .modal-feedback {
     display: none;
@@ -2073,6 +2087,9 @@
     height: 455px;
     margin-left: -470px;
     background-color: #565656;
+    background-image: url(../img/main-page/map-big.jpg);
+    background-repeat: no-repeat;
+    background-position: center center;
     box-shadow: 0 0 16px 8px rgba(0, 0, 0, .5);
   }
 
@@ -2162,4 +2179,29 @@
 
   .btn-close:active {
     opacity: .3;
+  }
+
+  .modal-error {
+    -webkit-animation: shake 0.6s;
+    animation: shake 0.6s ease;
+  }
+
+  .modal-show {
+    display: block;
+    animation-name: fly-up;
+    animation-duration: 0.6s;
+    animation-timing-function: ease;
+  }
+
+
+  @keyframes fly-up {
+    0% { transform: translateY(500px); }
+   50% { transform: translateY(-50px); }
+   100% { transform: translateY(0); }
+  }
+
+  @@keyframes shake {
+    0%, 100%                  {transform: translateX(0);}
+    10%, 30%, 50%, 70%, 90%   {transform: translateX(-10px);}
+    20%, 40%, 60%, 80%        {transform: translateX(10px);}
   }
