@@ -26,6 +26,9 @@ var previousSlide = document.querySelector(".slider-arrow-left");
 var dotSlide = document.querySelectorAll(".slide-indicators");
 var currentSlide = 0;
 
+var tabItem = document.querySelectorAll('.services-item');
+var tabContent = document.querySelectorAll('.tab-content');
+
 
 /* =====Попап с формой обратной связи===== */
 
@@ -165,19 +168,18 @@ if (slide) {
 /*======Tabs=====*/
 
 
-var tabItem = document.querySelectorAll('.services-item');
-var tabContent = document.querySelectorAll('.tabContent');
-
 if (tabContent) {
   for (i = 0; i < tabItem.length; ++i) {
     tabItem[i].addEventListener('click', function(evt) {
       evt.preventDefault(evt);
       for (j = 0; j < tabItem.length; ++j) {
         tabItem[j].classList.remove('services-item-selected');
+        tabContent[j].classList.remove('tab-content-active');
       };
       for (h = 0; h < tabItem.length; ++h) {
         if (tabItem[h] == this) {
           tabItem[h].classList.add('services-item-selected');
+          tabContent[h].classList.add('tab-content-active');
         }
       }
     });
