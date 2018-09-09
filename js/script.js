@@ -19,8 +19,15 @@ var productsCount = 0;
 var isStorageSupport = true;
 var storageUserName = '';
 
+var slide = document.querySelectorAll(".offer-slide");
+var countSlide = slide.length;
+var nextSlide = document.querySelector(".slider-arrow-right");
+var previousSlide = document.querySelector(".slider-arrow-left");
+var dotSlide = document.querySelectorAll(".slide-indicators");
+var currentSlide = 0;
 
-/* Попап с формой обратной связи */
+
+/* =====Попап с формой обратной связи===== */
 
 if (feedback) {
   try {
@@ -72,7 +79,7 @@ if (feedback) {
   });
 }
 
-/* Попап с картой */
+/* ======Попап с картой====== */
 
 if (modalMap) {
   var mapClose = modalMap.querySelector('.modal-close');
@@ -96,7 +103,7 @@ if (modalMap) {
   });
 }
 
-/* Попап: Добавлено в корзину */
+/* =====Попап: Добавлено в корзину===== */
 
 if (modalPurchase) {
   var purchaseClose = modalPurchase.querySelector('.modal-close');
@@ -123,4 +130,56 @@ if (modalPurchase) {
       }
     }
   });
+}
+
+/*=============Slider=============*/
+
+if (slide) {
+  nextSlide.addEventListener('click', function(evt) {
+    if (currentSlide < countSlide - 1) {
+      evt.preventDefault();
+      currentSlide = currentSlide + 1;
+      showSlide(currentSlide);
+    };
+  });
+
+  previousSlide.addEventListener('click', function(evt) {
+    if (currentSlide > 0) {
+      evt.preventDefault();
+      currentSlide = currentSlide - 1;
+      showSlide(currentSlide);
+    };
+  });
+
+  function showSlide(currentSlide) {
+    for (var i = 0; i < countSlide; i++) {
+      slide[i].classList.remove('offer-slide-active');
+      dotSlide[i].classList.add('slide-indicators-current');
+    };
+    slide[currentSlide].classList.add('offer-slide-active');
+    dotSlide[currentSlide].classList.remove('slide-indicators-current');
+  };
+};
+
+
+/*======Tabs=====*/
+
+
+var tabItem = document.querySelectorAll('.services-item');
+var tabContent = document.querySelectorAll('.tabContent');
+
+if (tabContent) {
+  for (i = 0; i < tabItem.length; ++i) {
+    tabItem[i].addEventListener('click', function(evt) {
+      evt.preventDefault(evt);
+      for (j = 0; j < tabItem.length; ++j) {
+        tabItem[j].classList.remove('services-item-selected');
+      };
+      for (h = 0; h < tabItem.length; ++h) {
+        if (tabItem[h] == this) {
+          tabItem[h].classList.add('services-item-selected');
+        }
+      }
+    });
+  };
 }
