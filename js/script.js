@@ -12,18 +12,18 @@ var modalMap = document.querySelector('.modal-map');
 
 var addToBasket = document.querySelectorAll('.btn-buy');
 var modalPurchase = document.querySelector('.purchase');
-var cart = document.querySelector(".user-panel__link-cart");
+var cart = document.querySelector('.user-panel__link-cart');
 var productsCount = 0;
 
 
 var isStorageSupport = true;
 var storageUserName = '';
 
-var slide = document.querySelectorAll(".offer-slide");
-var countSlide = slide.length;
-var nextSlide = document.querySelector(".slider-arrow-right");
-var previousSlide = document.querySelector(".slider-arrow-left");
-var dotSlide = document.querySelectorAll(".slide-indicators");
+var slides = document.querySelectorAll('.offer-slide');
+var countSlide = slides.length;
+var nextSlide = document.querySelector('.slider-arrow-right');
+var previousSlide = document.querySelector('.slider-arrow-left');
+var dotSlide = document.querySelectorAll('.slide-indicators');
 var currentSlide = 0;
 
 var tabItem = document.querySelectorAll('.services-item');
@@ -116,7 +116,7 @@ if (modalPurchase) {
       modalPurchase.classList.add('modal-show-purchase');
       productsCount++;
       cart.innerHTML = 'Корзина: ' + productsCount;
-      cart.classList.add("basket-full");
+      cart.classList.add('basket-full');
     });
   }
 
@@ -137,7 +137,7 @@ if (modalPurchase) {
 
 /*=============Slider=============*/
 
-if (slide) {
+if (slides.length > 0) {
   nextSlide.addEventListener('click', function(evt) {
     if (currentSlide < countSlide - 1) {
       evt.preventDefault();
@@ -156,10 +156,10 @@ if (slide) {
 
   function showSlide(currentSlide) {
     for (var i = 0; i < countSlide; i++) {
-      slide[i].classList.remove('offer-slide-active');
+      slides[i].classList.remove('offer-slide-active');
       dotSlide[i].classList.add('slide-indicators-current');
     };
-    slide[currentSlide].classList.add('offer-slide-active');
+    slides[currentSlide].classList.add('offer-slide-active');
     dotSlide[currentSlide].classList.remove('slide-indicators-current');
   };
 };
