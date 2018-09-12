@@ -168,7 +168,7 @@ if (slides.length > 0) {
 /*======Tabs=====*/
 
 
-if (tabContent) {
+if (tabContent.length > 0) {
   for (i = 0; i < tabItem.length; ++i) {
     tabItem[i].addEventListener('click', function(evt) {
       evt.preventDefault(evt);
